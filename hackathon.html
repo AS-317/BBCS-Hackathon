@@ -7,37 +7,37 @@
     <body>
         <h1>Save Those Food</h1>
         <br>
-        <img src="veg.jpg" style="height: 450px; width: auto;">
+        <img src="veg.jpg" style="height: 100px; width: auto;"></img_height>
         <br>
-        <!--use css to center the paragraph-->
+        <!--use css to center the paragraph (done)-->
         <p>According to a UN report, some 931 million tonnes of food goes to waste each year, of which 61% comes from households.</p>
         <p>Play a part in reducing food waste today!</p>
         <br>
-        <!--for the below buttons, use css to put padding and center them and include some indication that a food option button is pressed-->
+        <!--for the below buttons, use css to put padding (done) and center (done) them  and include some indication that a food option button is pressed-->
         <div>
             <h2>Recipe generator</h2>
             <p>Select food items</p>
             <img_height="50px" src="https://img.freepik.com/free-vector/hand-drawn-food-doodles-background_23-2149130950.jpg?semt=ais_hybrid&w=740&q=80"></img_height>
- 	        <button onclick="buttonFunc(this)">Potato</button>
+ 	        <button onclick="buttonFunc(this)">Potato 🥔</button>
             <script src="page1.js"></script>
- 	        <button onclick="buttonFunc(this)">Carrot</button>
+ 	        <button onclick="buttonFunc(this)">Carrot 🥕</button>
             <script src="page1.js"></script>
- 	        <button onclick="buttonFunc(this)">Lettuce</button>
+ 	        <button onclick="buttonFunc(this)">Lettuce 🥬</button>
             <script src="page1.js"></script>
- 	        <button onclick="buttonFunc(this)">Tomato</button>
+ 	        <button onclick="buttonFunc(this)">Tomato 🍅</button>
             <script src="page1.js"></script>
- 	        <button onclick="buttonFunc(this)">Banana</button>
+ 	        <button onclick="buttonFunc(this)">Banana 🍌</button>
             <script src="page1.js"></script>
             <br>
- 	        <button onclick="buttonFunc(this)">Egg</button>
+ 	        <button onclick="buttonFunc(this)">Egg 🥚</button>
             <script src="page1.js"></script>
- 	        <button onclick="buttonFunc(this)">Bread</button>
+ 	        <button onclick="buttonFunc(this)">Bread 🍞</button>
             <script src="page1.js"></script>
- 	        <button onclick="buttonFunc(this)">Rice</button>
+ 	        <button onclick="buttonFunc(this)">Rice 🍚</button>
             <script src="page1.js"></script>
- 	        <button onclick="buttonFunc(this)">Milk</button>
+ 	        <button onclick="buttonFunc(this)">Milk 🥛</button>
             <script src="page1.js"></script>
- 	        <button onclick="buttonFunc(this)">Cheese</button>
+ 	        <button onclick="buttonFunc(this)">Cheese 🧀</button>
             <script src="page1.js"></script>
             <br>
             <br>
@@ -45,6 +45,8 @@
  	            <button onclick="submitFunc()">Search</button> 
                 <script src="page1.js"></script> 
             </a>
+
+
         </div>
 
 <style type="text/css">
@@ -62,25 +64,46 @@
             margin:0;
             padding: 0;
             height:100vh;
-            cursor: url("120x120ribboncursor.png"), auto;       
+            cursor: url("animalcursoraesthetic.png"), auto;       
           }
-    
-    body {
-       cursor: url("120x120ribboncursor.png"), auto;
-    }
+        
 
-    h1, p, div {
+    h1, p, div{
           text-align: center;
-          border: 1px black solid;
-          border-radius: 15px;
           padding-top: 10px;
           padding-bottom: 10px;
           margin-left: 10px;
           margin-right: 10px;
           cursor: url("animalcursoraesthetic.png"), auto;
       }
+    
+        h1, h2, h3, h4, h5, h6, p{
+            background-color: white;
+            opacity: 0.8;
+        }
 
-      
+    button {
+        text-align: center;
+        background-color: #85cab1;
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        cursor: url("120x120ribboncursor.png"), auto;
+        margin: 5px;
+        border-radius: 8px;
+        justify-content: center;
+        align-items: center;
+    }
+    button:hover {
+        background-color: #0f5612;
+        cursor: url("120x120ribboncursor.png"), auto;
+    }
+    button:active {
+        background-color: #4288ae;
+        transition: background-color 0.3s ease;
+        cursor: url("120x120ribboncursor.png"), auto;
+    }
+
 </style>
         <br>
     </body>
