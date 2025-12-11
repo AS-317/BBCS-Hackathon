@@ -20,10 +20,15 @@ const connection = new Client({
     host: 'ep-weathered-voice-a1oawxdj-pooler.ap-southeast-1.aws.neon.tech',
     user: 'neondb_owner',
     password: 'npg_c1ICwiubznq2',
-    database: 'neondb?sslmode=require&channel_binding=require',
+    database: 'neondb',
     port: 5432,
-    ssl: false
+    ssl: {
+        mode: 'require',
+        channel_binding: 'require'
+    }
 });
+
+await connection.connect();
 
 //add this function to html of submit button
 async function submitFunc() {
