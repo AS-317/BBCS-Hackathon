@@ -11,8 +11,12 @@ function searchFunc() {
 };
 
 //add this function to html of food suggestion buttons
-function buttonFunc(btn) { 
-    foodArr.push(btn.textContent); 
+function buttonFunc(btn) {
+    if (foodArr.includes(btn.textContent) === false) {
+        foodArr.push(btn.textContent);
+    } else {
+        foodArr = foodArr.filter(item => item !== btn.textContent);
+    }     
 };
 
 //variable that connects to database
