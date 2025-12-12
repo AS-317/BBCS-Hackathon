@@ -28,125 +28,34 @@
             <p style="font-family:serif">Select food items</p>
             <img_height="50px" src="https://img.freepik.com/free-vector/hand-drawn-food-doodles-background_23-2149130950.jpg?semt=ais_hybrid&w=740&q=80"></img_height>
  	        <button id="potatoButton">Potato 🥔</button>
-            <script src="page1.js">
-                const potato = document.getElementById("potatoButton");
+            <button id="carrotButton">Carrot 🥕</button>
+            <button id="lettuceButton">Lettuce 🥬</button>
+            <button id="tomatoButton">Tomato 🍅</button>
+            <button id="bananaButton">Banana 🍌</button>
+            <button id="eggButton">Egg 🥚</button>
+            <button id="breadButton">Bread 🍞</button>
+            <button id="riceButton">Rice 🍚</button>
+            <button id="milkButton">Milk 🥛</button>
+            <button id="cheeseButton">Cheese 🧀</button>
+            <script>
+                function toggleButton(id) {
+                    const button = document.getElementById(id);
+                    button.addEventListener("click", () => {
+                        button.style.backgroundColor =
+                            button.style.backgroundColor === "" ? "green" : "";
+                    });
+                }
 
-                potato.addEventListener("click", () => {
-                    if (potato.style.backgroundColor === "") {
-                        potato.style.backgroundColor = "green";
-                    } else {
-                        potato.style.backgroundColor = "";
-                    }
-                });
-            </script>
- 	        <button id="carrotButton">Carrot 🥕</button>
-            <script src="page1.js">
-                const carrot = document.getElementById("carrotButton");
-
-                carrot.addEventListener("click", () => {
-                    if (carrot.style.backgroundColor === "") {
-                        carrot.style.backgroundColor = "green";
-                    } else {
-                        carrot.style.backgroundColor = "";
-                    }
-                });
-            </script>
- 	        <button id="lettuceButton">Lettuce 🥬</button>
-            <script src="page1.js">
-                const lettuce = document.getElementById("lettuceButton");
-
-                lettuce.addEventListener("click", () => {
-                    if (lettuce.style.backgroundColor === "") {
-                        lettuce.style.backgroundColor = "green";
-                    } else {
-                        lettuce.style.backgroundColor = "";
-                    }
-                });
-            </script>
- 	        <button id="tomatoButton">Tomato 🍅</button>
-            <script src="page1.js">
-                const tomato = document.getElementById("tomatoButton");
-
-                tomato.addEventListener("click", () => {
-                    if (tomato.style.backgroundColor === "") {
-                        tomato.style.backgroundColor = "green";
-                    } else {
-                        tomato.style.backgroundColor = "";
-                    }
-                });
-            </script>
- 	        <button id="bananaButton">Banana 🍌</button>
-            <script src="page1.js">
-                const banana = document.getElementById("bananaButton");
-
-                banana.addEventListener("click", () => {
-                    if (banana.style.backgroundColor === "") {
-                        banana.style.backgroundColor = "green";
-                    } else {
-                        banana.style.backgroundColor = "";
-                    }
-                });
-            </script>
-            <br>
- 	        <button id="eggButton">Egg 🥚</button>
-            <script src="page1.js">
-                const egg = document.getElementById("eggButton");
-
-                egg.addEventListener("click", () => {
-                    if (egg.style.backgroundColor === "") {
-                        egg.style.backgroundColor = "green";
-                    } else {
-                        egg.style.backgroundColor = "";
-                    }
-                });
-            </script>
- 	        <button id="breadButton">Bread 🍞</button>
-            <script src="page1.js">
-                const bread = document.getElementById("breadButton");
-
-                bread.addEventListener("click", () => {
-                    if (bread.style.backgroundColor === "") {
-                        bread.style.backgroundColor = "green";
-                    } else {
-                        bread.style.backgroundColor = "";
-                    }
-                });
-            </script>
- 	        <button id="riceButton">Rice 🍚</button>
-            <script src="page1.js">
-                const rice = document.getElementById("riceButton");
-
-                rice.addEventListener("click", () => {
-                    if (rice.style.backgroundColor === "") {
-                        rice.style.backgroundColor = "green";
-                    } else {
-                        rice.style.backgroundColor = "";
-                    }
-                });
-            </script>
- 	        <button id="milkButton">Milk 🥛</button>
-            <script src="page1.js">
-                const milk = document.getElementById("milkButton");
-
-                milk.addEventListener("click", () => {
-                    if (milk.style.backgroundColor === "") {
-                        milk.style.backgroundColor = "green";
-                    } else {
-                        milk.style.backgroundColor = "";
-                    }
-                });
-            </script>
- 	        <button id="cheeseButton">Cheese 🧀</button>
-            <script src="page1.js">
-                const cheese = document.getElementById("cheeseButton");
-
-                cheese.addEventListener("click", () => {
-                    if (cheese.style.backgroundColor === "") {
-                        cheese.style.backgroundColor = "green";
-                    } else {
-                        cheese.style.backgroundColor = "";
-                    }
-                });
+                toggleButton("potatoButton");
+                toggleButton("carrotButton");
+                toggleButton("lettuceButton");
+                toggleButton("tomatoButton");
+                toggleButton("bananaButton");
+                toggleButton("eggButton");
+                toggleButton("breadButton");
+                toggleButton("riceButton");
+                toggleButton("milkButton");
+                toggleButton("cheeseButton");
             </script>
             <br>
             <br>
