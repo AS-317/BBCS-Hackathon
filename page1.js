@@ -14,7 +14,7 @@ function buttonFunc(btn) {
     }     
 };
 
-const app = express();
+/* const app = express();
 app.use(express.json());
 
 async function submitFunc(req, res) {
@@ -58,4 +58,23 @@ async function submitFunc(req, res) {
 
 app.post('/search', submitFunc);
 
-app.listen(5500, () => console.log("Server running on port 5500"));
+app.listen(5500, () => console.log("Server running on port 5500")); */
+
+const NEON_CONNECTION = "redacted…";
+   import { neon } from 'https://cdn.jsdelivr.net/npm/@neondatabase/serverless@1.0.2/+esm';
+   const sql = neon(NEON_CONNECTION);
+   async function submitFunc() {
+     try {
+       const result = await sql(`SELECT recipename, recipelink FROM recipes WHERE recipeid IN (
+                    SELECT UNNEST(recipeid) FROM ingredients WHERE ingredients LIKE $1
+                )`,
+                [`%${item}%`]
+            );
+       const list = document.getElementById("list");
+       list.innerHTML = result.map(r => `<li><a href="${r.recipelink}">${r.recipename}</a></li>`).join("");
+     } catch (err) {
+       console.error(err);
+       alert("Error loading data. Check console.");
+     }
+   }
+   window.addEventListener("DOMContentLoaded", submitFunc);
