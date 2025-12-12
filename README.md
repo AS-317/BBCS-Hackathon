@@ -26,7 +26,7 @@ https://debraklein.com/easy-vegan-potato-and-veggie-hash-skillet-recipe/#recipe
   https://wallpapers.com/cute-food
 - icon on the tab image:
 https://www.istockphoto.com/illustrations/crossed-cooking-utensils
-Editing of images
+Editing of images:
 - https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.remove.bg/&ved=2ahUKEwixh8Gm07eRAxUtSWwGHZ8uMagQFnoECCQQAQ&usg=AOvVaw1GOpWrLOrpd6I6i01TDM4c (used to remove background)
 - https://the-image-editor.com/image/resize (used to change size of an image)
 
