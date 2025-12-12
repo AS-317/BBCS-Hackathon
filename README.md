@@ -25,6 +25,9 @@ https://debraklein.com/easy-vegan-potato-and-veggie-hash-skillet-recipe/#recipe
 - background image:
   https://wallpapers.com/cute-food
 
+https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.remove.bg/&ved=2ahUKEwixh8Gm07eRAxUtSWwGHZ8uMagQFnoECCQQAQ&usg=AOvVaw1GOpWrLOrpd6I6i01TDM4c (used to remove background)
+https://imageresizer.com/ (used to change size of an image)
+
 
 JS Code:
 - ChatGPT (to import SQL and connect to database)
