@@ -10,7 +10,6 @@ Parts of this website
 4. SQL: SQL is used to store the recipes and links for various ingredients.
 
 References
-HTML Code:
 
 CSS Code:
 - cursor images:
@@ -34,5 +33,3 @@ Editing of images:
 JS Code:
 - ChatGPT (to import SQL and connect to database)
 - Explorer (to search up JS code for some functions)
-
-SQL:
