@@ -14,6 +14,53 @@ function buttonFunc(btn) {
     }     
 };
 
+/* Possible code 1 (partially taken from chatGPT)
+//import postgresql
+import pkg from 'pg';
+const {Client} = pkg;
+
+//variable that connects to database
+const connection = new Client({
+    host: 'ep-weathered-voice-a1oawxdj-pooler.ap-southeast-1.aws.neon.tech',
+    user: 'neondb_owner',
+    password: 'db_password',
+    database: 'neondb',
+    port: 5432,
+    ssl: {
+        mode: 'require',
+        channel_binding: 'require'
+    }
+});
+
+await connection.connect();
+
+//add this function to html of submit button
+async function submitFunc() {
+    if (foodArr.length !== 0) {
+        let tableArr = [];
+
+        for (let i = 0; i < foodArr.length; i++) {
+            try {
+                //query to run in database, returns recipe names and links
+                const res = await connection.query(
+                    `SELECT recipename, recipelink FROM recipes WHERE recipeid IN (
+                        SELECT recipeid FROM Ingredients1 WHERE ingredientname LIKE $1
+                    );`,
+                    [`%${foodArr[i]}%`]
+                );
+                tableArr.push(...res.rows);
+            } catch (err) {
+            console.error('Database error:', err);
+            }
+        }
+
+        //removes duplicates of recipes
+        let resultArr = [...new Map(tableArr.map(r => [r.recipename, r])).values()];
+        return resultArr;
+    }
+} */
+
+/* Possible code 2 (partially taken from chatGPT) 
 const app = express();
 app.use(express.json());
 
@@ -58,4 +105,24 @@ async function submitFunc(req, res) {
 
 app.post('/search', submitFunc);
 
-app.listen(5500, () => console.log("Server running on port 5500"));
+app.listen(5500, () => console.log("Server running on port 5500")); */
+
+//Taken from the slides, we're not sure how to actually make it work.
+const NEON_CONNECTION = "redacted…";
+   import { neon } from 'https://cdn.jsdelivr.net/npm/@neondatabase/serverless@1.0.2/+esm';
+   const sql = neon(NEON_CONNECTION);
+   async function submitFunc() {
+     try {
+       const result = await sql(`SELECT recipename, recipelink FROM recipes WHERE recipeid IN (
+                    SELECT UNNEST(recipeid) FROM ingredients WHERE ingredients LIKE $1
+                )`,
+                [`%${item}%`]
+            );
+       const list = document.getElementById("list");
+       list.innerHTML = result.map(r => `<li><a href="${r.recipelink}">${r.recipename}</a></li>`).join("");
+     } catch (err) {
+       console.error(err);
+       alert("Error loading data. Check console.");
+     }
+   }
+   window.addEventListener("DOMContentLoaded", submitFunc);
