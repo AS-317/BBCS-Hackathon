@@ -24,42 +24,39 @@
             <h2 class="no space">RECIPE GENERATOR</h2>
             <p class="no space" style="font-family:serif">Select food items</p>
             <img_height="50px" src="https://img.freepik.com/free-vector/hand-drawn-food-doodles-background_23-2149130950.jpg?semt=ais_hybrid&w=740&q=80"></img_height>
- 	        <button id="toggleBtn" onclick="buttonFunc(this)">Potato</button>
+ 	        <button id="potatoButton">Potato 🥔</button>
+            <button id="carrotButton">Carrot 🥕</button>
+            <button id="lettuceButton">Lettuce 🥬</button>
+            <button id="tomatoButton">Tomato 🍅</button>
+            <button id="bananaButton">Banana 🍌</button>
+            <button id="eggButton">Egg 🥚</button>
+            <button id="breadButton">Bread 🍞</button>
+            <button id="riceButton">Rice 🍚</button>
+            <button id="milkButton">Milk 🥛</button>
+            <button id="cheeseButton">Cheese 🧀</button>
             <script>
-                const btn = document.getElementById("toggleBtn");
+                function toggleButton(id) {
+                    const button = document.getElementById(id);
+                    button.addEventListener("click", () => {
+                        button.style.backgroundColor =
+                            button.style.backgroundColor === "" ? "green" : "";
+                    });
+                }
 
-                btn.addEventListener("click", () => {
-                    if (btn.style.backgroundColor === "") {
-                        btn.style.backgroundColor = "green";
-                    } else {
-                        btn.style.backgroundColor = "";
-                    }
-                });
-                <!--attempt to enable deselection-->
+                toggleButton("potatoButton");
+                toggleButton("carrotButton");
+                toggleButton("lettuceButton");
+                toggleButton("tomatoButton");
+                toggleButton("bananaButton");
+                toggleButton("eggButton");
+                toggleButton("breadButton");
+                toggleButton("riceButton");
+                toggleButton("milkButton");
+                toggleButton("cheeseButton");
             </script>
-            <script src="page1.js"></script>
- 	        <button id="toggleBtn" onclick="buttonFunc(this)">Carrot</button>
-            <script src="page1.js"></script>
- 	        <button id="toggleBtn" onclick="buttonFunc(this)">Lettuce</button>
-            <script src="page1.js"></script>
- 	        <button id="toggleBtn" onclick="buttonFunc(this)">Tomato</button>
-            <script src="page1.js"></script>
- 	        <button id="toggleBtn" onclick="buttonFunc(this)">Banana</button>
-            <script src="page1.js"></script>
-            <br>
- 	        <button id="toggleBtn" onclick="buttonFunc(this)">Egg</button>
-            <script src="page1.js"></script>
- 	        <button id="toggleBtn" onclick="buttonFunc(this)">Bread</button>
-            <script src="page1.js"></script>
- 	        <button id="toggleBtn" onclick="buttonFunc(this)">Rice</button>
-            <script src="page1.js"></script>
- 	        <button id="toggleBtn" onclick="buttonFunc(this)">Milk</button>
-            <script src="page1.js"></script>
- 	        <button id="toggleBtn" onclick="buttonFunc(this)">Cheese</button>
-            <script src="page1.js"></script>
             <br>
             <br>
-            <a href="">
+            <a href="page2.html">
  	            <button onclick="submitFunc()">Search</button> 
                 <script src="page1.js"></script> 
             </a>
