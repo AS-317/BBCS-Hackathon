@@ -27,6 +27,17 @@
             <p class="no space" style="font-family:serif">Select food items</p>
             <img_height="50px" src="https://img.freepik.com/free-vector/hand-drawn-food-doodles-background_23-2149130950.jpg?semt=ais_hybrid&w=740&q=80"></img_height>
  	        <button id="toggleBtn" onclick="buttonFunc(this)">Potato</button>
+            <script>
+                const btn = document.getElementById("toggleBtn");
+
+                btn.addEventListener("click", () => {
+                    if (btn.style.backgroundColor === "") {
+                        btn.style.backgroundColor = "green";
+                    } else {
+                        btn.style.backgroundColor = "";
+                    }
+                });
+            </script>
             <script src="page1.js"></script>
  	        <button id="toggleBtn" onclick="buttonFunc(this)">Carrot</button>
             <script src="page1.js"></script>
@@ -140,17 +151,6 @@
     }
 </script>
 
-<script>
-    const btn = document.getElementById("toggleBtn");
-
-    btn.addEventListener("click", () => {
-        if (btn.textContent === "OFF") {
-            btn.style.backgroundColor = "#85cab1";
-        } else {
-            btn.style.backgroundColor = "#0f5612";
-        }
-    });
-</script>
 
         <br>
     </body>
