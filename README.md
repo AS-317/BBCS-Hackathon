@@ -13,6 +13,10 @@ References
 HTML Code:
 
 CSS Code:
+- cursor images:
+- food images:
+- background image:
+
 
 JS Code:
 - ChatGPT (to import SQL and connect to database)
